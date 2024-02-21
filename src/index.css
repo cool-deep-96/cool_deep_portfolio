@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.customx{
+  animation-name: sidebar;
+  animation-duration: 1s;
+}
+
+@keyframes sidebar{
+ from { height: 0rem; width: 0;}
+  to { height: 18rem; width: 10rem;}
+
+}
+.customy{
+  animation-name: sidebar2;
+  animation-duration: 1s;
+}
+
+@keyframes sidebar2{
+  from  { height: 18rem; width: 10rem;}
+to  {height: 0rem; width: 0rem;}
+
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
