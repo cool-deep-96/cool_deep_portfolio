@@ -41,18 +41,18 @@ const Techstack = ()=>{
     //     };
 
     //     const handleMouseUp = () => {
-    //         document.removeEventListener('mousemove', handleMouseMove);
-          
-    //     };
-    //     document.addEventListener('mousemove', handleMouseMove);
-    //     document.addEventListener('mouseup', handleMouseUp);
+      //         document.removeEventListener('mousemove', handleMouseMove);
+        
+    //     }; handleMouseMove);
+    //     document.addEventListener('mouseup', h
+    //     document.addEventListener('mousemove',andleMouseUp);
     // };
 
     return(
         <div className="mt-[80px]" >
-            <div className='classname flex flex-col items-center' data-aos="fade-up">
+            <div className='classname flex flex-col items-center mb-3' data-aos="fade-up">
                 <p className='text-4xl text-center font-bold leading-loose md:text-left'>My <span className="text-indigo-300">Tech Stack</span></p>
-                <p className='text-xl font-semibold leading-loose'>Technologies I've been working with recently</p>
+                <p className='text-lg md:text-xl font-semibold leading-loose'>Technologies I've been working with recently</p>
             </div>
             
 

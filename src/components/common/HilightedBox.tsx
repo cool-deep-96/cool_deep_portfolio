@@ -89,9 +89,9 @@ const HilightedBox = ({children}:HilightedBoxPropsType) => {
           ${border.right? 'border-r-2':''}
           ${border.top? 'border-t-2':''}
           ${border.bottom? 'border-b-2':''}
-    rounded-xl origin-center flex justify-center items-center flex-col relative overflow-hidden`}>
+    rounded-xl origin-center flex justify-center items-center flex-col relative overflow-hidden border-indigo-300`}>
 
-      <div className={`${isMouseEntered? '':'hidden'} absolute rounded-full shadow-[0px_0px_200px_100px] shadow-white `} ref={tourchRef}></div>
+      <div className={`${isMouseEntered? '':'hidden'} absolute rounded-full shadow-[0px_0px_200px_100px] shadow-indigo-300 `} ref={tourchRef}></div>
       
         {children}
       

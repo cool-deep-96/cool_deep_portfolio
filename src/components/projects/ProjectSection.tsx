@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import HilightedBox from "../common/HilightedBox";
 import { projects } from "../../data/projects";
 
+
 interface projectType{
   name: string;
   github: string;
@@ -18,6 +19,10 @@ interface projectType{
 const ProjectSection = () => {
   const [filter, setFilter] = useState<string>('All');
   const [modified, setModified] = useState<projectType[]>([]);
+
+  let type: string[] =['All', 'Collaborative','Fullstack', 'Frontend']
+
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, [])
@@ -41,11 +46,14 @@ const ProjectSection = () => {
     <div className="flex flex-col justify-center items-center  mt-8 py-5">
       <HilightedBox>
         <div data-aos="fade-up" className="text-3xl font-mono font-bold mt-10 px-2 py-1 "> My Latest <span className="text-indigo-300">Projects</span></div>
-        <div className="flex gap-5 my-8" data-aos='fade-left'>
-          <button className="p-3 border rounded-xl text-sm" onClick={()=>setFilter('All')}>All</button>
-          <button className="p-3 border rounded-xl text-sm" onClick={()=>setFilter('Collaborative')}>Collaborative</button>
-          <button className="p-3 border rounded-xl text-sm" onClick={()=>setFilter('Fullstack')}>Fullstack</button>
-          <button className="p-3 border rounded-xl text-sm" onClick={()=>setFilter('Frontend')}>Frontend</button>
+        <div className="flex gap-2 md:gap-5 my-8" data-aos='fade-left'>
+
+          {type.length>0 && 
+            type.map((type, index)=>(
+            <button key={index} className={`px-3 py-1  rounded-xl text-base font-semibold ${filter=== type? 'bg-indigo-700 text-white':'bg-slate-300 text-black'} transition-all duration-300`} onClick={()=>setFilter(type)}>{type}</button>
+            ))
+            
+          }
         </div>
         <div className="flex flex-row flex-wrap gap-10 my-10 justify-center">
           {
@@ -53,7 +61,7 @@ const ProjectSection = () => {
               return (
 
                 <div className=" rounded-md" data-aos="zoom-in-down">
-                  <div key={index} data-aos="zoom-in-down" className=" p-2  flex flex-col justify-center border border-green-400 gap-3 rounded-md  transformCustom ">
+                  <div key={index} data-aos="zoom-in-down" className="  flex flex-col justify-center border border-green-400 gap-3 rounded-md  transformCustom ">
                     <div className={`relative h-72 w-96 border overflow-hidden border-indigo-900 rounded-lg`}>
                       <div className="group/img absolute  h-full w-full bg-slate-900 top-0 left-0 bg-opacity-70 rounded-lg ">
                         <img src={project.imgSrc} alt="Cover Photo" className=" absolute top-0 left-0 -z-10 h-full w-full bg-green-100 group-hover/img:scale-125 duration-500 rounded-lg" />
@@ -78,7 +86,7 @@ const ProjectSection = () => {
 
                             project?.techStack.map((tech, index) => {
                               return (
-                                <div key={index} className="px-3 py-1 bg-orange-500 text-white tracking-wider font-semibold  rounded-xl text-xs border border-orange-300 cursor-pointer">
+                                <div key={index} className="px-3 py-1 bg-orange-700 text-white tracking-wider font-semibold  rounded-xl text-xs  cursor-pointer">
                                   {tech}
 
                                 </div>

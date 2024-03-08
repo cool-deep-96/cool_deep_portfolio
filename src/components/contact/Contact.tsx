@@ -42,7 +42,7 @@ const Contact = () => {
 
     },[])
     return (
-            <div data-aos="fade-left" className=' mt-8 py-5'>
+            <div data-aos="fade-left" className=' mt-8 pt-5'>
                 <div className="flex flex-col justify-center items-center">
                     <div data-aos="fade-up" className="text-3xl font-mono font-bold mt-10 px-2 py-1 "> Contact Details</div>
                 </div>
@@ -107,11 +107,11 @@ const Contact = () => {
                                     <p className='text-3xl md:text-4xl text-center py-10 '>Get In Touch With Me</p>
                                     <div className='flex gap-4  py-3' >
                                         <img className='h-8 w-8' src={letter} alt='email' />
-                                        <a href='mailto: 27581kuldeep.2021cse@gmail.com'> 27581kuldeep.2021cse@gmail.com</a>
+                                        <a href='mailto: 27581kuldeep.2021cse@gmail.com'> 275************@gmail.com</a>
                                     </div>
                                     <div className='flex gap-4 py-3'>
                                         <img className='h-8 w-8' src={phonecall} alt='phone' />
-                                        <a href=" tel:+91 8581952029" className=''>+91 8581952029</a>
+                                        <a href=" tel:+91 8581952029" className=''>+91 85********</a>
                                     </div>
                                     <div>
                                         <p className='text-lg py-3'>Follow Me:</p>

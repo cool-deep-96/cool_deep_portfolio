@@ -17,11 +17,11 @@ const Home = () => {
         AOS.init({duration: 1000});
     },[])
     return (
-            <div className='flex flex-col gap-20 max-w-screen overflow-hidden overflow-x-hidden min-h-screen mt-8 py-5'>
-            <HilightedBox>
-                <div className='grid md:grid-cols-2 lg:grid-cols-2 lg:justify-around '>
+            <div className='flex flex-col gap-5 max-w-screen overflow-hidden overflow-x-hidden min-h-screen mt-20 pt-5'>
+            <HilightedBox >
+                <div className='grid md:grid-cols-2 lg:grid-cols-2 lg:justify-around p-5 '>
                     <div className='self-center   md:order-2 lg:order-2 lg:px-2' data-aos='fade-right'>
-                        <Player src={homeimg} className='md:h-4/6 md:w-5/6' autoplay loop />
+                        <Player src={homeimg} className='md:h-4/6 md:w-4/6' autoplay loop />
                     </div>
                     <div className="text-3xl flex flex-col gap-10 items-center justify-center font-semibold md:order-1 lg:order-1 lg:py-12 " data-aos='fade-left'>
                         <div className=' flex flex-col gap-5  md:w-9/12 px-10'>
