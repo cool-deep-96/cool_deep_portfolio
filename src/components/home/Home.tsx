@@ -7,6 +7,8 @@ import download from '../../assets/lotties/download.json';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import HilightedBox from '../common/HilightedBox';
+import Techstack from '../techstack/Techstack';
 
 
 
@@ -15,9 +17,9 @@ const Home = () => {
         AOS.init({duration: 1000});
     },[])
     return (
-        <>
-            <div className='flex flex-col gap-20 '>
-                <div className='grid md:grid-cols-2 lg:grid-cols-2 lg:justify-around'>
+            <div className='flex flex-col gap-20 max-w-screen overflow-hidden overflow-x-hidden min-h-screen mt-8 py-5'>
+            <HilightedBox>
+                <div className='grid md:grid-cols-2 lg:grid-cols-2 lg:justify-around '>
                     <div className='self-center   md:order-2 lg:order-2 lg:px-2' data-aos='fade-right'>
                         <Player src={homeimg} className='md:h-4/6 md:w-5/6' autoplay loop />
                     </div>
@@ -35,12 +37,16 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                </HilightedBox>
                 <Projects/>
+                <Techstack/>
                 
                 <Contact />
+                
+                    
+                
+                
             </div>
-
-        </>
     )
 }
 

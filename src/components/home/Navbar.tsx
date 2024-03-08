@@ -25,8 +25,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <>
-      <nav className="w-full flex py-4 justify-between items-center navbar bg-gradient-to-r from-green-400 via-transparent via-25% to-blue-500 to-100% md:px-20  relative">
+    <main className="bg-slate-400 dark:bg-slate-900 dark:text-white min-h-screen pt-10 ">
+      <nav className="w-full flex py-4 justify-between items-center navbar  md:px-20 fixed z-[1] top-0 backdrop-blur-md">
         <NavLink to="/">
           <h1 className="px-3 text-2xl font-semibold font-serif text-white" >KULDEEP</h1>
         </NavLink>
@@ -34,11 +34,11 @@ const Navbar = () => {
         <ul className="list-none md:flex hidden justify-end items-center flex-1 ">
           {navLinks.map((nav, index) => (
             <li
-              key={nav.id}
+              key={index}
               className={`font-poppins font-semibold text-xl cursor-pointer text-[16px]  ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} `}
 
             >
-              <NavLink to={nav.id} className={({ isActive }) => isActive ? "text-white transition duration-1000" : "border-hidden hover:border-solid border-b-4 border-blue-900 border-width duration-100"}>
+              <NavLink to={nav.id} className={({ isActive }) => isActive ? "text-white transition duration-1000" : " text-yellow-200 border-blue-900 duration-100 hitesh relative"}>
                 {nav.title}
               </NavLink>
             </li>
@@ -53,10 +53,6 @@ const Navbar = () => {
 
           {toggle?<CrossButton/>:<LeftArrow/>}
           </button>
-            
-            
-         
-
           <div
             className={` right-0   overflow-hidden md:hidden ${!toggle ? " customy h-0 w-0 " : " customx w-40 h-72"
               } `}
@@ -71,8 +67,6 @@ const Navbar = () => {
                 >
                   
                     {nav.title}
-                  
-
                 </li>
               </NavLink>
               ))}
@@ -84,7 +78,8 @@ const Navbar = () => {
 
       </nav>
       <Outlet />
-    </>
+    </main>
+
   );
 };
 
