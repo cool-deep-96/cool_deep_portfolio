@@ -28,7 +28,7 @@ const ProjectSection = () => {
         setModified(projects)
       } 
       else{
-      const temp = projects.filter((projects, index, arr)=>{
+      const temp = projects.filter((projects)=>{
         return projects.Type === filter
       })
       setModified(temp);

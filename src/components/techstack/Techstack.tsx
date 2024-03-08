@@ -1,18 +1,18 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { TechStackData } from "../../data/skill"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 
-interface TechType{
-    Name: string,
-    Side: string,
-    Img: string
+// interface TechType{
+//     Name: string,
+//     Side: string,
+//     Img: string
 
-}
+// }
 
 const Techstack = ()=>{
 
