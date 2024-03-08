@@ -27,7 +27,8 @@ const Navbar = () => {
   return (
     <main className="bg-slate-400 dark:bg-slate-900 dark:text-white min-h-screen pt-10 ">
       <nav className="w-full flex py-4 justify-between items-center navbar  md:px-20 fixed z-[1] top-0 backdrop-blur-md">
-        <NavLink to="/">
+        <NavLink to="/" className='flex justify-center items-center gap-3'>
+          <img src="/assets/Images/cool_deep_logo.png" className="h-12 w-12" alt="logo"/>
           <h1 className="px-3 text-2xl font-semibold font-serif text-white" >KULDEEP</h1>
         </NavLink>
 
