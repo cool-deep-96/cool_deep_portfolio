@@ -45,7 +45,7 @@ const ProjectSection = () => {
 
     <div className="flex flex-col justify-center items-center  mt-8 py-5">
       <HilightedBox>
-        <div data-aos="fade-up" className="text-3xl font-mono font-bold mt-10 px-2 py-1 "> My Latest <span className="text-indigo-300">Projects</span></div>
+        <div data-aos="fade-up" className="text-3xl font-mono font-bold mt-10  py-1 "> My Latest <span className="text-indigo-300">Projects</span></div>
         <div className="flex gap-2 md:gap-5 my-8" data-aos='fade-left'>
 
           {type.length>0 && 

@@ -1,5 +1,14 @@
 export const projects = [
     {
+      name: "DealYouNeed",
+      github: "https://github.com/cool-deep-96",
+      deployment: "https://dealyouneed.com/",
+      imgSrc: "/assets/Images/dealyouneed.png",
+      description: "Pick Your Tool from Over 15 Different Categories From project management to CRM, marketing automation to hosting, find the right tools for your current business stage",
+      Type: "Collaborative",
+      techStack: ["NextJs", "TypeScript", "TailwindCSS", "Sanity.io", ]
+    },
+    {
       name: "GeekHub",
       github: "https://github.com/cool-deep-96",
       deployment: "https://www.geekhub-uiet.club/",
